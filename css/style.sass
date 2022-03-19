@@ -57,18 +57,22 @@ a
     border-radius: 28px
     padding: 12px 30px
     font-size: 12px
-    box-shadow: rgba(0, 0, 0, 0.1) 0px 20px 25px -5px, rgba(0, 0, 0, 0.04) 0px 10px 10px -5px
     font-weight: 600
     display: inline-block
 
+    &:not(.cta-header)
+      box-shadow: rgba(0, 0, 0, 0.1) 0px 20px 25px -5px, rgba(0, 0, 0, 0.04) 0px 10px 10px -5px
+      
   &.cta
     &-header
       font-size: 10px
       padding: 5px 15px
       margin-top: -6px
       color: $pink
+      font-weight: 400
       border: 1px solid $pink
       background-color: $light
+      box-shadow: rgba(203, 206, 208, 0.2) 0px 8px 24px
 
       &:hover
         color: $light_pink
@@ -148,6 +152,7 @@ a
     font-size: 17px
     margin-top: 12px
     line-height: 22px
+    color: hsl(207, 5%, 62%)
 
   &-item
     &:nth-child(2)
@@ -199,7 +204,7 @@ a
     p
       line-height: 21px
       font-size: 15px
-      color: $grayish_blue
+      color: $very_dark_cyan
 
     &:nth-child(4)
       background-color: $light
@@ -278,6 +283,7 @@ a
     font-size: 14px
     line-height: 24px
     margin-bottom: 44px
+    opacity: .7
 
 .footer
   &-logo
@@ -296,6 +302,9 @@ a
     li
       display: flex
       gap: 18px
+      
+      a
+        opacity: .8
 
   &-social
     display: flex
@@ -323,10 +332,12 @@ a
       line-height: 25px
       margin-bottom: 17px
       color: $light
+      opacity: .8
 
     p
       font-size: 14px
       line-height: 23px
+      opacity: .7
 
     form
       margin-top: 56px
@@ -385,7 +396,7 @@ a
 
   a
     &.cta-header
-      font-size: 14px
+      font-size: 15px
       padding: 10px 33px
 
   .hero
