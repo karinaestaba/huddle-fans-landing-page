@@ -74,11 +74,11 @@ a
         color: $light_pink
         border-color: $light_pink
 
-.main
-  &-content
-    max-width: 1220px
-    padding: 10px 20px
+.container
+  max-width: 1220px
+  padding: 10px 20px
 
+.main
   &-header
     padding: 27px 24px
     display: flex
@@ -87,8 +87,8 @@ a
     align-items: center
 
 .hero
-  padding-top: 77px
-  margin-bottom: 119px
+  padding-top: 87px
+  margin-bottom: 100px
 
   h1
     font-size: 24px
@@ -120,6 +120,7 @@ a
     flex-direction: column
     align-items: center
     gap: 50px
+    padding-bottom: 0
 
   &-img
     text-align: left
@@ -166,8 +167,8 @@ a
 
 .card
   &-list
-    padding-top: 214px
-    padding-bottom: 40px
+    padding-top: 23px
+    padding-bottom: 59px
 
   &-img
     > img
@@ -177,7 +178,8 @@ a
     display: flex
     flex-direction: column-reverse
     gap: 67px
-    margin-bottom: 243px
+    padding: 79px 20px 50px
+    background-color: $very_pale_blue
 
     h2
       font-size: 20px
@@ -189,21 +191,30 @@ a
       font-size: 15px
       color: $grayish_blue
 
-    &:nth-child(2)
+    &:nth-child(4)
       gap: 81px
+      background-color: $light
+      padding-top: 142px
+      padding-bottom: 117px
 
       .card
         &-img
           margin-right: -2px
           margin-top: 2px
 
-    &:nth-child(3)
+    &:nth-child(6)
       gap: 73px
+      padding-top: 20px
+      padding-bottom: 114px
 
       .card
         &-img
           margin-top: -2px
           margin-left: -2px
+
+    &:nth-child(8)
+      gap: 73px
+      padding-top: 20px
 
   &-cta-content
     font-size: 24px
@@ -219,17 +230,23 @@ a
       width: 201px
       padding: 2px 24px
 
-.main-footer
-  background-color: $very_dark_cyan
-  color: $light
+.bg-divider
+  img
+    display: block
 
-  > .container
-    max-width: 1220px
-    display: flex
-    flex-direction: column
-    margin-top: 238px
-    padding: 10px 28px
-    text-align: left
+.main-footer
+  color: $light
+  margin-top: 239px
+
+  > .bg-container
+    background-color: $very_dark_cyan
+
+    > .container
+      max-width: 1220px
+      display: flex
+      flex-direction: column
+      padding: 10px 28px
+      text-align: left
 
   ul
     list-style: none
@@ -268,7 +285,7 @@ a
       filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(174deg) brightness(185%) contrast(102%)
 
   &-subscription
-    padding-top: 71px
+    padding-top: 51px
     order: -1
     margin-bottom: 102px
 
