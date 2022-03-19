@@ -253,6 +253,7 @@ a
 .bg-divider
   img
     display: block
+    width: 100%
 
 .main-footer
   color: $light
@@ -362,6 +363,13 @@ a
           cursor: pointer
           background-color: $light_pink
           transition: background 1s
+
+@media (min-width: 768px)
+  .card-text,
+  .hero p
+    max-width: 80%
+    margin-left: auto
+    margin-right: auto
 
 @media (min-width: 998px)
   body
@@ -499,7 +507,6 @@ a
         grid-template-columns: 3fr 3fr
         gap: 20px
         align-items: center
-        padding: 0
 
       h2
         font-size: 40px
@@ -510,7 +517,6 @@ a
       p
         line-height: 27px
         font-size: 16px
-        white-space: pre-line
 
       &:nth-child(4)
         > .container
@@ -635,6 +641,7 @@ a
     &-subscription
       grid-area: form
       padding-top: 4px
+      padding-right: 20px
 
       h2
         font-size: 24px
@@ -660,3 +667,22 @@ a
         &.btn
           height: 47px
           align-self: start
+
+@media (min-width: 1220px)
+  .card
+    &-item
+      > .container
+        padding: 0
+
+      p
+        white-space: pre-line
+
+  .footer
+    &-subscription
+      padding-right: 0
+
+  .card-text,
+  .hero p
+    max-width: none
+    margin-left: 0
+    margin-right: 0
