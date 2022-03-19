@@ -74,6 +74,13 @@ a
         color: $light_pink
         border-color: $light_pink
 
+.msg-error
+  color: $light_red
+  display: none
+  margin-top: 5px
+  font-size: 12px
+  line-height: 17px
+
 .container
   max-width: 1220px
   padding: 10px 20px
@@ -297,6 +304,12 @@ a
 
     img
       filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(174deg) brightness(185%) contrast(102%)
+      
+    a
+      &:hover
+        > img
+          filter: invert(53%) sepia(91%) saturate(1146%) hue-rotate(152deg) brightness(100%) contrast(105%)
+          transition: filter .5s
 
   &-subscription
     padding-top: 51px
@@ -323,17 +336,32 @@ a
     input
       width: 100%
       height: 50px
+      padding: 10px
       border-radius: 6px
       background: $light
+
+      &:focus
+        outline: none
+        box-shadow: 0 0 3px $grayish_blue
+      &:invalid
+        border-color: $light_red
+
+        + .msg-error
+          display: block
 
     button
       &.btn
         width: 160px
         height: 50px
-        align-self: end
         border-radius: 6px
         background-color: $pink
         color: $light
+        align-self: end
+
+        &:hover
+          cursor: pointer
+          background-color: $light_pink
+          transition: background 1s
 
 @media (min-width: 998px)
   body
@@ -623,10 +651,12 @@ a
         flex-direction: row
         gap: 42px
 
-        input
-          width: 316px
-          height: 47px
-          display: inline-block
+      input
+        width: 316px
+        height: 47px
+        display: inline-block
 
-        button
+      button
+        &.btn
           height: 47px
+          align-self: start
